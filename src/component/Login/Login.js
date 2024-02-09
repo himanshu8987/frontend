@@ -45,11 +45,12 @@ function Login() {
           password,
         });
         if (data.message === "Invalid username or password") {
-          toast.error(data.message, toastVariables);
+          alert("Invalid username or password");
         } else {
           localStorage.setItem("user", JSON.stringify(data.user));
           navigate("/profile");
         }
+        alert("Login successful")
       } catch (err) {
         console.log(err.message);
       }
