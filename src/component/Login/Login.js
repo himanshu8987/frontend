@@ -40,7 +40,7 @@ function Login() {
     if (handleValidation()) {
       const { username, password } = value;
       try {
-        const { data } = await axios.post("http://localhost:8000/login", {
+        const { data } = await axios.post("https://db-mysql.vercel.app/login", {
           username,
           password,
         });

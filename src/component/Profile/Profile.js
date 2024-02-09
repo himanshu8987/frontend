@@ -32,7 +32,7 @@ function Profile() {
     event.preventDefault();
     try {
       const { id } = JSON.parse(localStorage.getItem("user"));
-      const response = await axios.post(`http://localhost:8000/profile/${id}`, {
+      const response = await axios.post(`https://db-mysql.vercel.app/profile/${id}`, {
         age,
         dob,
         contact,
@@ -49,7 +49,7 @@ function Profile() {
     try {
       const { id } = JSON.parse(localStorage.getItem("user"));
       const response = await axios.put(
-        `http://localhost:8000/profile/${id}/edit`,
+        `https://db-mysql.vercel.app/profile/${id}/edit`,
         {
           age,
           dob,
