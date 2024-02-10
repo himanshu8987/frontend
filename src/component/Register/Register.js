@@ -23,7 +23,7 @@ function Register() {
     event.preventDefault();
     if (handelValidation()) {
       const { email, username, password } = value;
-      const { data } = await axios.post("https://db-mysql.vercel.app/register", {
+      const { data } = await axios.post("https://api-lemon-one.vercel.app/register", {
         username,
         email,
         password,

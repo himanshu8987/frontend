@@ -1,98 +1,126 @@
+/* Additional styling for the form container */
 .form-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .form {
-    width: 300px;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 10px;
-  }
-  
-  input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .button-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-  }
-  
-  .submit,
-  .edit,
-  .logout {
-    width: 45%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .submit {
-    background-color: #007bff;
-  }
-  
-  .submit:hover {
-    background-color: #0056b3;
-  }
-  
-  .edit {
-    background-color: #ffc107;
-  }
-  
-  .edit:hover {
-    background-color: #e0a800;
-  }
-  
-  .logout {
-    background-color: #dc3545;
-  }
-  
-  .logout:hover {
-    background-color: #bd2130;
-  }
-  
-  .modal {
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-  }
-  
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    border-radius: 10px;
-  }
-  
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(to bottom right, #38a2d7,#561139);
+  background-color: #2c3e50;
+}
+
+/* Styling for the form wrapper */
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styling for the form */
+.form {
+  width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  background-image: linear-gradient(to bottom right, #ea96ca,#283c4d);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.name{
+  margin-left: 50px;
+}
+
+/* Styling for the input labels */
+label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+/* Styling for the input fields */
+input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Styling for the button container */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Styling for the buttons */
+.submit,
+.edit,
+.logout {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.submit:hover {
+  background-color: #0056b3;
+}
+
+.edit {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.edit:hover {
+  background-color: #e0a800;
+}
+
+.logout {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.logout:hover {
+  background-color: #bd2130;
+}
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  border-radius: 10px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

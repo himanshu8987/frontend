@@ -29,7 +29,7 @@ function Login() {
     if (handleValidation()) {
       const { username, password } = value;
       try {
-        const { data } = await axios.post("https://db-mysql.vercel.app/login", {
+        const { data } = await axios.post("https://api-lemon-one.vercel.app/login", {
           username,
           password,
         });
