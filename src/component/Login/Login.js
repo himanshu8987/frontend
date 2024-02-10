@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
-// import { loginRoute } from "../utils/APIRouter";
 
 function Login() {
   const navigate = useNavigate();
@@ -12,14 +9,6 @@ function Login() {
     username: "",
     password: "",
   });
-  const toastVariables = {
-    position: "bottom-right",
-    autoClose: 8000,
-    pauseOnHover: true,
-    draggable: true,
-    theme: "dark",
-  };
-
   useEffect(() => {
     if (localStorage.getItem("user")) {
       navigate("/");
@@ -29,7 +18,7 @@ function Login() {
   const handleValidation = () => {
     const { password, username } = value;
     if (password === "" || username === "") {
-      toast.error("Username and Password are required", toastVariables);
+      alert("Username and Password are required");
       return false;
     }
     return true;
@@ -84,7 +73,6 @@ function Login() {
             Don't have an account? <Link to="/">Register</Link>
           </span>
         </form>
-        <ToastContainer />
       </div>
     </>
   );

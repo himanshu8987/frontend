@@ -23,17 +23,11 @@ function Profile() {
     setContact(event.target.value);
   };
 
-  const handleLogout = () => {
-    localStorage.removeItem("user");
-    navigate("/login");
-  };
-
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
       const { id } = JSON.parse(localStorage.getItem("user"));
       const response = await axios.put(`https://db-mysql.vercel.app/profile/${id}`, {
-      // const response = await axios.put(`http://localhost:8000/profile/${id}`, {
         age,
         dob,
         contact,
@@ -52,7 +46,6 @@ function Profile() {
       const { id } = JSON.parse(localStorage.getItem("user"));
       const response = await axios.put(
         `https://db-mysql.vercel.app/profile/${id}/edit`,
-        // `http://localhost:8000/profile/${id}/edit`,
         {
           age,
           dob,
@@ -109,9 +102,6 @@ function Profile() {
             EDIT
           </button>
         </div>
-        <button type="button" className="logout" onClick={handleLogout}>
-          Logout
-        </button>
       </form>
 
       {showModal && (
