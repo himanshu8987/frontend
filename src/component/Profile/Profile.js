@@ -32,11 +32,13 @@ function Profile() {
     event.preventDefault();
     try {
       const { id } = JSON.parse(localStorage.getItem("user"));
-      const response = await axios.post(`https://db-mysql.vercel.app/profile/${id}`, {
+      const response = await axios.put(`https://db-mysql.vercel.app/profile/${id}`, {
+      // const response = await axios.put(`http://localhost:8000/profile/${id}`, {
         age,
         dob,
         contact,
       });
+      alert("Successfully saved");
       console.log(response.data);
       setShowModal(false);
     } catch (error) {
@@ -50,6 +52,7 @@ function Profile() {
       const { id } = JSON.parse(localStorage.getItem("user"));
       const response = await axios.put(
         `https://db-mysql.vercel.app/profile/${id}/edit`,
+        // `http://localhost:8000/profile/${id}/edit`,
         {
           age,
           dob,
